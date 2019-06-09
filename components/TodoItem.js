@@ -1,10 +1,11 @@
 import React from 'react'
 
-function TodoItem(){
-    return (
+function TodoItem(props){
+    
+    return ( 
         <div className="todo-item">
-            <input type="checkbox" />
-            <p>lorem ipsum dolor sit</p>
+            <input type="checkbox"  style={{ textDecoration : props.todo.completed && "line-through" }}/>
+            <p>{props.todo.text}</p>
         </div>
     )
 }
